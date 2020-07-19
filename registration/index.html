@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>REGISTRATION FORM</title>
-        <h1 REGISTER YOURSELF ></h1>
+
         <!-- <link rel="stylesheet" href="style.css"> -->
         <script>
             function validation()
@@ -35,8 +35,8 @@
                     alert("username should be greater than 3 letters")
                 }
 
-                var email= document.getElementById('4');
-                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(registration.email.value))
+                var email= document.getElementById('4').value;
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
                 {
                         alert("successfully added")
                 }
@@ -44,8 +44,8 @@
                 {
                     alert("this is not valid emal address")
                 }
-                var rec_email= document.getElementById('5');
-                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(registration.rec_email.value))
+                var rec_email= document.getElementById('5').value;
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(rec_email))
                 {
                         alert("successfully added")
                 }
@@ -115,98 +115,125 @@
             }
 
         </script>
-        <style>
-        body{
+
+<!-- css file -->
+<style>
+body{
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.068),rgba(0,0,0,0.068),url(pic1.JPG)); */
-    height: 100vh;
+    height: 100;
+    background-color: black;
     background-size : cover;
     background-position: center;
 }
 
-.registration form
-{
+.registration form{
     width : 360px;
     margin: auto;
-    padding: 10% 0 0;
+    padding: 5% 0 0;
 }
 .form {
     position: relative;
-    z-index: 1;
-    background: #1c2a30c4;
+    z-index: 15;
+    background: #1c2a30c5;
     max-width: 360px;
     margin: auto;
-    padding: 25px;
-    text-align: center;
-    text-decoration-color: beige;
+    padding: 30px;
 }
 .form input{
     outline : 1;
-    background:#ffffff;
+    background:beige;
     border: 5%;
     box-sizing: border-box;
-    font-style: italic;
+    font-style: normal;
     font-size: 15px;
-    text-decoration-color: beige;
     box-align: right;
     text-align: left;
 		float: right;
-        height:30px;
-width:200px;
-border-radius:2px;
+    height:30px;
+    width:200px;
+    border-radius:20px;
+    border: 1px solid black;
 }
 .form b{
  color: #ffffff;
+ background-color: black;
+ opacity: .7;
 }
-/* .form button{
-    ion-button: color ="light";
-} */
+.form button{
+    color: black;
+    background-color: beige;
+    size: 30px;
+}
 h1{
-    color: aqua;
+    color: green;
+    background-color: black;
+    font-weight: bold;
+    font-style: italic;
+    opacity: .7;
+    font-size: 50;
     text-align: center;
+    border: 1px solid white;
+    margin-left: 500px;
+    margin-right: 500px;
 
 }
+footer{
+  color: white;
+  font-size: 20px;
+  margin-top: inherit;
+  padding-top: 2px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 </style>
-     </head>
+</head>
+
+<!-- html file -->
 <body style="background-image:url(images/pic2.jpg)">
-    <h1>REGISTER!</h1>
+    <h1>REGISTER YOURSELF!</h1>
     <!-- <img src="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6),url(pic1.JPG));"> -->
         <div class="registration form">
-        <form cass="registration" onsubmit="return valuechange()" method="post">
+        <form cass="registration">
     <label for="first name:"><b>First name:</b></label>
     <input type="text" placeholder="First Name" id="1" required><br><br>
 
     <label for="last name:"><b>Last Name:</b></label>
-    <input type="text" placeholder="last name" name="lastname" id="2" required><br><br>
+    <input type="text" placeholder="Last Name" name="lastname" id="2" required><br><br>
 
     <label for="Username":><b>Username:</b></label>
     <input type="text" placeholder="Username" name="Username" id="3" required><br><br>
 
     <label for="email:"><b>Email:</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="4" required><br> <br>
+    <input type="text" placeholder="Enter Email Address" name="email" id="4" required><br> <br>
 
     <label for="recovery email:"><b>Recovery Email:</b></label>
-    <input type="text" placeholder="Email address" name="email" id="5"><br><br>
+    <input type="text" placeholder="Enter Recovery Email Address" name="email" id="5"><br><br>
 
     <label for="age:"><b>Age:</b></label>
-    <input type="number range(2)" placeholder=" not more than 2 digits" name="age" id="6" required><br><br>
+    <input type="number range(2)" placeholder="UPTO 2 digits" name="age" id="6" required><br><br>
 
     <label for="DOB:"><b>DOB:</b></label>
     <input type="date" placeholder="DOB" name="date" id="7" required><br><br>
 
     <label for="phone number:"><b>Mobile Number:</b></label>
-    <input type="number range(10)" placeholder="number" name="number" id="8" required><br><br>
+    <input type="number range(10)" placeholder="10 Digits" name="number" id="8" required><br><br>
 
     <label for="password:"><b>Password:</b></label>
     <input type="password" placeholder="min 8 characters" name="password" id="9" required><br><br>
 
     <label for="confirm password:"><b>Confirm Password:</b></label>
-    <input type="password" placeholder="confirm password" name="password" id="10" required><br><br>
-    <button onclick="validation()" type="button">SUBMIT</button>
+    <input type="text" placeholder="Re-enter Password" name="password" id="10" required><br><br>
 
-        <br><br>
-        </form>
+    <button  class="button" onclick="validation()" type="button" id="num">SUBMIT</button>
+<br><br>
+</form>
+
 
     </div>
 </body>
+<footer>
+  <hr>
+  <p> Copyright &copy; Kajal Singhal 2020 </p>
+</footer>
 
 </html>

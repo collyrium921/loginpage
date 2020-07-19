@@ -1,14 +1,14 @@
 # HTML
 1. HTML is used for all the structuring of the page.
 2. tags used:
-  a) <div
-  b) <form>
-  c) <label>
-  d) <br>
-  e) <b>
-  f) <input>
-  g) <button>
-  h) <footer>
+  a) div
+  b) form
+  c) label
+  d) br
+  e) b
+  f) input
+  g) button
+  h) footer
 3. Attributes used:
     -- placeholder
     -- type
